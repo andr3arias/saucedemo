@@ -44,10 +44,8 @@ public class CartStepsDefinitions {
     }
 
     @When("^the user login with her targets$")
-    public void theUserLoginWithHerTargets(List<Users> usersList) {
-        Users users;
-        users = usersList.get(0);
-        OnStage.theActorInTheSpotlight().attemptsTo(SignInWith.herTargets(users));
+    public void theUserLoginWithHerTargets(List<Users> users){
+        OnStage.theActorInTheSpotlight().attemptsTo(SignInWith.herTargets(users.get(0)));
     }
 
     @When("^the user try to add items to shopping cart$")

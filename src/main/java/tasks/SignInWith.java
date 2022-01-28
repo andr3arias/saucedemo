@@ -10,6 +10,9 @@ import userinterfaces.SignInPage;
 
 public class SignInWith implements Task {
     Users users;
+    public SignInWith (Users users){
+        this.users = users;
+    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
